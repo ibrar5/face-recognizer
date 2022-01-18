@@ -1,0 +1,18 @@
+.name_object{
+    color: darkblue;
+}
+#camera {
+    border: dotted 2px;
+    height: 300px;
+    width: 350px;
+}
+#accuracy, #object{
+    color: darkblue;
+}
+body{
+    background-color: rgb(240, 240, 255);
+}
+.heading{
+    font-size: 30px;
+    width: 60%;
+}
