@@ -16,8 +16,21 @@ function capture(){
 }
 console.log(ml5.version);
 
-my_model = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/model.json', model_my);
+my_model = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/0Z6NncAyT/mode.json', model_my)
 
 function model_my(){
-    colsole.log("model is created");
+    console.log("model is created");
+}
+function check(){
+    image = document.getElementById("img_model");
+    my_model.classify(image, gotResult);
+    function gotResult(error, results){
+        if(error){
+            console.log(error);
+        }else{
+            console.log(results);
+            document.getElementById("object").innerHTML = results[0].label;
+            document.getElementById("accuracy").innerHTML = results[0].confidence.toFixed(3);
+        }
+    }
 }
